@@ -17,13 +17,13 @@ From the analysis, the below inferences were made:
 - Based on the number of employess retiring by title, it was observed that there are almost 60,000 employees retiring from Senior roles (Senior Engineer and Senior Staff) and 2 from Manager roles, amounting to a total of 57,670 retiring from leadership roles. This is 63.7 % of the total employees retiring.  
 - Similar to the senior role (Senior Engineer and Senior Staff), there are a high number of Engineers and Staff retiring as well, which might create a deficit in these roles. The total number of Engineers retiring amounts to 45397, and the total number of Staff retiring amounts to 40497. These are two kinds of roles which would need immediate focus.
  
-        ![Retiring Employee Count](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/Retiring_count_by_title.PNG) 
+     ![Retiring Employee Count](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/Retiring_count_by_title.PNG) 
 
 **Mentorship program**
 
 - Based on the list, it can be seen that there are only a total of 1,550 employees who can participate in the program. Taking the count of employees per title into consideration, it can be seen that each mentor would have atleast 50 mentee, which might be difficult to handle. 
 
-        ![Mentee per Mentor](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/Mentee_per_Mentor.PNG)
+     ![Mentee per Mentor](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/Mentee_per_Mentor.PNG)
 
 - Not all employees from the list might be available or qualified for mentoring. Also, there are no managers in the list. The mentor list will need to be expanded. 
 
@@ -78,7 +78,7 @@ ON rc.dept_name=mc.dept_name AND rc.title = mc.title
 
 From the query, we can see that there are no mentors for a few roles for a few departments. Filtering for that using the where clause, we can obtain the list 
 
-        ![No Mentor](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/No_Mentor.PNG)
+   ![No Mentor](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/No_Mentor.PNG)
 
 
 
