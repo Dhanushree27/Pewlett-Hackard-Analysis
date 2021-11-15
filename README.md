@@ -1,4 +1,4 @@
-# Silver Tsunami analysis at Pewlett Hackard
+# Retirement Impact analysis at Pewlett Hackard
 
 ## Overview of the Project
 This project was initiated to identify the number of employees who will be retiring soon and the open positions that will have to be filled. To begin the analysis, the employee data available in csv files was to be moved to a database. A ERD diagram was created and the data was successfully stored in a database. 
@@ -35,7 +35,7 @@ From the analysis, the below inferences were made:
 In addition to the retiring or mentor qualified employees by title list, it would be helpful if the lists had the department information as well, since this would also provide a better picture on which areas need more focus.
 
 ### Employees retiring per Dept, per Title
-'
+```sql
     SELECT d.dept_name, u.title,  COUNT(u.emp_no) 
     FROM unique_titles as u
     INNER JOIN dept_emp as de
@@ -45,14 +45,14 @@ In addition to the retiring or mentor qualified employees by title list, it woul
     WHERE de.to_date='9999-01-01'
     GROUP BY d.dept_name,u.title
     ORDER BY d.dept_name,count desc
-'
+```sql
 Running this query, shows that the Developement team has a lot of senior employees retiring followed by Production and Sales. It can also be seen that the manager for Sales and Research departments are retiring
 
 ### Mentors available per Dept, per Title
 Running a similar query, we can obtain the mentors available per Dept, per Title
 
 Alternatively, we can join the two queries to compare the possible open positions with the mentors for each role
-'
+```sql
     SELECT rc.dept_name,rc.title,rc.r_count,mc.m_count
     FROM (SELECT d.dept_name, u.title,  COUNT(u.emp_no)as r_count
             FROM unique_titles as u
@@ -72,7 +72,7 @@ Alternatively, we can join the two queries to compare the possible open position
             GROUP BY d.dept_name,m.title
             ORDER BY d.dept_name) AS MC
     ON rc.dept_name=mc.dept_name AND rc.title = mc.title                        
-'
+```sql
 From the query, we can see that there are no mentors for a few roles for a few departments. Filtering for that using the where clause, we can obtain the list 
 
 ![No Mentor](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/No_Mentor.PNG)
