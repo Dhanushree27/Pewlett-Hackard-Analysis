@@ -45,7 +45,7 @@ In addition to the retiring or mentor qualified employees by title list, it woul
     WHERE de.to_date='9999-01-01'
     GROUP BY d.dept_name,u.title
     ORDER BY d.dept_name,count desc
-```sql
+```
 Running this query, shows that the Developement team has a lot of senior employees retiring followed by Production and Sales. It can also be seen that the manager for Sales and Research departments are retiring
 
 ### Mentors available per Dept, per Title
@@ -72,7 +72,7 @@ Alternatively, we can join the two queries to compare the possible open position
             GROUP BY d.dept_name,m.title
             ORDER BY d.dept_name) AS MC
     ON rc.dept_name=mc.dept_name AND rc.title = mc.title                        
-```sql
+```
 From the query, we can see that there are no mentors for a few roles for a few departments. Filtering for that using the where clause, we can obtain the list 
 
 ![No Mentor](https://github.com/Dhanushree27/Pewlett-Hackard-Analysis/blob/main/Images/No_Mentor.PNG)
